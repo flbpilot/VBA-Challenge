@@ -26,6 +26,13 @@ Sub stocksEval()
 End Sub
 
 
+    Cell(1,9).Value = "Ticker"
+    Cell(1,10).Value = "YearlyChange"
+    Cell(1,11).Value = "PercentChange"
+    Cell(1,12).Value = "TotalVol"
+
+    
+
 
 
 
