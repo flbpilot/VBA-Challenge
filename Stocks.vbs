@@ -40,3 +40,7 @@ Sub stocks1()
         ws.Cells(1, 10).Value = "YearlyChange"
         ws.Cells(1, 11).Value = "PercentChange"
         ws.Cells(1, 12).Value = "TotalVolume"
+        
+     
+    'Loop through cells to find last row'
+   LastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
