@@ -45,17 +45,23 @@ Sub stocks1()
     'set Last row variable
     Dim Lastrow As Long
     
-    'dim worksheet and workbook with respect to their lox
+    'dim worksheet and workbook 
     Dim ws As Worksheet
     Dim wb As Workbook
     Set wb = ActiveWorkbook
 
     'set columns from (i-l)
-        For Each ws In wb.Sheets
-        ws.Cells(1, 9).Value = "Ticker_Symbol"
-        ws.Cells(1, 10).Value = "Yearly_Change"
-        ws.Cells(1, 11).Value = "Percent_Change"
-        ws.Cells(1, 12).Value = "Total_Volume"
+    For Each ws In wb.Sheets
+        ws.Cells(1, 9).Value = ("Ticker Symbol")
+        ws.Cells(1, 10).Value = ("Yearly Change")
+        ws.Cells(1, 11).Value = ("Percent Change")
+        ws.Cells(1, 12).Value = ("Total Volume")
+        ws.Cells(1, 16).Value = ("Ticker")
+        ws.Cells(1, 17).Value = ("Value")
+        ws.Cells(2, 15).Value = ("Greatest % increase")
+        ws.Cells(3, 15).Value = ("Greatest % decrease")
+        ws.Cells(4, 15).Value = ("Greatest total volume")
+        
 
         
     'set variables for calculations
@@ -78,7 +84,7 @@ Sub stocks1()
     'Loop through cells to find last row
    LastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
   
-        'set the startup value of the first stock symbol on the ws
+        'set the begining value of stock
         OpenPrice = ws.Cells(2, 3).Value
     
         'loop through the ticker symbol
